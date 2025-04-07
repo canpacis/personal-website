@@ -41,6 +41,8 @@ func Layout(ctx *pages.LayoutContext) I {
 			Meta(Property("twitter:description"), Content(desc)),
 			Meta(Property("twitter:image"), Content("/public/banner.webp")),
 
+			Title(Text(title)),
+
 			Link(Href("/public/main.css"), Rel("stylesheet")),
 			Script(Src("/public/main.js")),
 			Link(Href("/public/profile.webp"), Rel("icon"), Type("image/webp")),
