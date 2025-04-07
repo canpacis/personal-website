@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /public/profile.webp
+Allow: /
+Disallow: /public/
+
+Sitemap: https://www.canpacis.com/sitemap.xml
