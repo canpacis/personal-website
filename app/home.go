@@ -206,25 +206,27 @@ func HomePage(ctx *pages.PageContext) I {
 
 					Map(projects, func(project Project, i int) Node {
 						return Div(
-							Class("rounded-md p-4 h-60 flex flex-col justify-center relative group overflow-hidden"),
+							Class("rounded-md p-4 h-72 flex flex-col justify-center relative group overflow-hidden project"),
 
 							Div(
-								Class("absolute border border-transparent w-full h-60 pointer-events-none inset-0 rounded-[inherit] [mask-clip:padding-box,border-box] [mask-composite:intersect] [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] opacity-0 group-hover:opacity-100 transition-all"),
+								Data("laser", ""),
+								Class("absolute border border-transparent w-full h-72 pointer-events-none inset-0 rounded-[inherit] [mask-clip:padding-box,border-box] [mask-composite:intersect] [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] opacity-0 group-hover:opacity-100 transition-all"),
 
 								Div(
 									Data("offset", ""),
-									Class("absolute inset-0 bg-gradient-to-l from-transparent via-purple-500 to-transparent w-60 aspect-square"),
-									StyleAttr("offset-path: rect(0px auto auto 0px round 240px)"),
+									Class("absolute inset-0 bg-gradient-to-l from-transparent via-purple-500 to-transparent w-72 aspect-square"),
+									StyleAttr("offset-path: rect(0px auto auto 0px round 288px)"),
 								),
 							),
 
 							Div(
-								Class("absolute border border-transparent w-full h-60 pointer-events-none inset-0 rounded-[inherit] [mask-clip:padding-box,border-box] [mask-composite:intersect] [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] opacity-0 group-hover:opacity-100 transition-all"),
+								Data("laser", ""),
+								Class("absolute border border-transparent w-full h-72 pointer-events-none inset-0 rounded-[inherit] [mask-clip:padding-box,border-box] [mask-composite:intersect] [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] opacity-0 group-hover:opacity-100 transition-all"),
 
 								Div(
 									Data("offset-offset", ""),
-									Class("absolute inset-0 bg-gradient-to-l from-transparent via-sky-500 to-transparent w-60 aspect-square"),
-									StyleAttr("offset-path: rect(0px auto auto 0px round 240px)"),
+									Class("absolute inset-0 bg-gradient-to-l from-transparent via-sky-500 to-transparent w-72 aspect-square"),
+									StyleAttr("offset-path: rect(0px auto auto 0px round 288px)"),
 								),
 							),
 
@@ -232,7 +234,7 @@ func HomePage(ctx *pages.PageContext) I {
 							Div(
 								Class("flex justify-between"),
 
-								H3(Class("text-lg font-bold my-2"), Text(project.Title)),
+								H3(Class("text-base md:text-lg font-bold my-2"), Text(project.Title)),
 								Button(
 									ButtonSizeIcon,
 									ButtonVariantGhost,
@@ -244,6 +246,8 @@ func HomePage(ctx *pages.PageContext) I {
 								),
 							),
 							P(
+								Class("text-sm md:text-base"),
+
 								Text(project.Description),
 							),
 						)
