@@ -1,0 +1,16 @@
+github.com/NYTimes/gziphandler v1.1.1 h1:ZUDjpQae29j0ryrS0u/B8HZfJBtBQHjqw2rQ2cqUQ3I=
+github.com/NYTimes/gziphandler v1.1.1/go.mod h1:n/CVRwUEOgIxrgPvAQhUUr9oeUtvrhMomdKFjzJNB0c=
+github.com/canpacis/pacis v0.1.0 h1:jpVwQTrUs7uZYyQZMq5WZjwXtvT/b0nmuvqlpLqKoa4=
+github.com/canpacis/pacis v0.1.0/go.mod h1:CqgyL88muH2VOEx5I9UYP5p7ZwuZbPiwjRh9ACF1tKs=
+github.com/canpacis/pacis-pages v0.0.5 h1:QuE8uLsko41MZCHxba8rVT6BgXHJWukCeARvk47f5wo=
+github.com/canpacis/pacis-pages v0.0.5/go.mod h1:gol1GDL07hfzIXquXBlpcLM7VGI0jGIzDn8byP0QVxo=
+github.com/canpacis/pacis-ui v0.0.5 h1:chEsU8Kdxt5Z4O9OB0qw2OO6PVQ/mhnm4sqgsBndEdQ=
+github.com/canpacis/pacis-ui v0.0.5/go.mod h1:YxaeeLtzBjqehbTPI+VEkQyo+KBXmPGNm+4wrC16Uvg=
+github.com/canpacis/pacis/pages v0.0.0-20250407071728-6abd59ef16d3 h1:RMav0QZ2G8NCfOmiRGI02/HZ7BRLkGIqkTm6OQicPSQ=
+github.com/canpacis/pacis/pages v0.0.0-20250407071728-6abd59ef16d3/go.mod h1:7ZepF4kPyrt5DFtpm3LVgucbTywR2FgoM26olL9N+OA=
+github.com/canpacis/pacis/ui v0.0.0-20250407071728-6abd59ef16d3 h1:3Z/9e1ZmWUxSjBKvkgG7mwStFYmQYTd+KFm1qr23qxY=
+github.com/canpacis/pacis/ui v0.0.0-20250407071728-6abd59ef16d3/go.mod h1:KepbdpEOcEEsuNImcLEGZ1xgyNJOL5nbk1I3GUsHCcc=
+github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
+github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
