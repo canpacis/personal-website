@@ -22,7 +22,7 @@ type Skill struct {
 
 type Experience struct {
 	Start   time.Time
-	End     *time.Time
+	End     time.Time
 	Company string
 	Role    string
 }
@@ -55,6 +55,13 @@ type Project struct {
 	Link        string
 }
 
+func formatTime(date time.Time) string {
+	if date.Year() == 0 {
+		return "Current"
+	}
+	return date.Format("Jan 2006")
+}
+
 func HomePage(ctx *pages.PageContext) I {
 	reach := []ReachOutButton{
 		{"X/Twitter", components.XIcon, "https://x.com/can_pacis"},
@@ -84,12 +91,39 @@ func HomePage(ctx *pages.PageContext) I {
 		{"Nixpacks"},
 	}
 
+	loc := time.Now().Location()
+
 	experience := []Experience{
-		{time.Now(), nil, "Mitaex", "Mobile Engineer"},
-		{time.Now(), nil, "Various", "Software Developer"},
-		{time.Now(), nil, "Macellan", "Senior Frontend Developer"},
-		{time.Now(), nil, "Viavis", "Web Developer"},
-		{time.Now(), nil, "Various", "Web Developer"},
+		{
+			time.Date(2025, time.February, 1, 0, 0, 0, 0, loc),
+			time.Date(0, time.January, 1, 0, 0, 0, 0, loc),
+			"Mitaex",
+			"Mobile Engineer",
+		},
+		{
+			time.Date(2024, time.January, 1, 0, 0, 0, 0, loc),
+			time.Date(0, time.January, 1, 0, 0, 0, 0, loc),
+			"Various",
+			"Software Developer",
+		},
+		{
+			time.Date(2022, time.July, 1, 0, 0, 0, 0, loc),
+			time.Date(2023, time.August, 1, 0, 0, 0, 0, loc),
+			"Macellan",
+			"Senior Frontend Developer",
+		},
+		{
+			time.Date(2021, time.February, 1, 0, 0, 0, 0, loc),
+			time.Date(2022, time.July, 1, 0, 0, 0, 0, loc),
+			"Viavis",
+			"Web Developer",
+		},
+		{
+			time.Date(2020, time.January, 1, 0, 0, 0, 0, loc),
+			time.Date(2021, time.February, 1, 0, 0, 0, 0, loc),
+			"Various",
+			"Web Developer",
+		},
 	}
 
 	projects := []Project{
@@ -191,7 +225,7 @@ func HomePage(ctx *pages.PageContext) I {
 								Class("text-muted-foreground leading-snug"),
 
 								Span(Text(exp.Company)),
-								Span(Class("text-xs ml-4"), Text("Feb 2025"), Span(Class("mx-1"), Text("-")), Text("Current")),
+								Span(Class("text-xs ml-4"), Text(formatTime(exp.Start)), Span(Class("mx-1"), Text("-")), Text(formatTime(exp.End))),
 							),
 						)
 					}),
