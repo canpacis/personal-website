@@ -21,6 +21,6 @@
     "library": "Library",
     "contribution": "Contribution",
     "cta": "Buy me a Coffee",
-    "footer": ["Built by", "me", "using", "pacis"]
+    "footer": { "0": "Built by", "1": "me", "2": "using", "3": "pacis" }
   }
 }

@@ -4,6 +4,7 @@ import (
 	"time"
 
 	"github.com/canpacis/pacis/pages"
+	"github.com/canpacis/pacis/pages/i18n"
 	. "github.com/canpacis/pacis/ui/components"
 	. "github.com/canpacis/pacis/ui/html"
 	"github.com/canpacis/pacis/ui/icons"
@@ -148,12 +149,12 @@ func HomePage(ctx *pages.PageContext) I {
 				H1(
 					Class("text-2xl mb-2 md:mb-0 md:text-3xl font-bold leading-normal md:leading-14"),
 
-					Text("Hi, I'm Muhammed Ali"),
+					i18n.Text("heading"),
 				),
 				P(
 					Class("font-light max-w-none md:max-w-[75%] leading-5"),
 
-					Text("I code stuff I dream up because I taught myself how. Always hungry to learn whatever it takes to build the next cool thing."),
+					i18n.Text("subtitle"),
 				),
 			),
 			Img(
@@ -169,16 +170,16 @@ func HomePage(ctx *pages.PageContext) I {
 			Class("flex flex-col gap-8 app-container flex-1"),
 
 			Section(
-				H2(Class("font-bold mb-2"), Text("About")),
+				H2(Class("font-bold mb-2"), i18n.Text("about.title")),
 				P(
 					Class("text-muted-foreground"),
 
-					Text("Based in Turkey, I'm a self-taught developer with 5 years of frontend and fullstack experience who turned my English Literature degree into a unexpected coding journey. I build digital experiences that blend storytelling with technology, figuring out each programming challenge my own way—no bootcamps needed, just raw curiosity and determination to create stuff that actually matters."),
+					i18n.Text("about.text"),
 				),
 			),
 
 			Section(
-				H2(Class("font-bold mb-2"), Text("Reach out")),
+				H2(Class("font-bold mb-2"), i18n.Text("reach_out")),
 				Div(
 					Class("flex gap-2 flex-wrap"),
 
@@ -198,7 +199,7 @@ func HomePage(ctx *pages.PageContext) I {
 			),
 
 			Section(
-				H2(Class("font-bold mb-2"), Text("Skills")),
+				H2(Class("font-bold mb-2"), i18n.Text("skills.title")),
 
 				Div(
 					Class("flex gap-2 flex-wrap"),
@@ -212,7 +213,7 @@ func HomePage(ctx *pages.PageContext) I {
 			Section(
 				Class("relative"),
 
-				H2(Class("font-bold mb-2"), Text("Experience")),
+				H2(Class("font-bold mb-2"), i18n.Text("experience.title")),
 				Ul(
 					Class("flex flex-col gap-2 pl-2 before:content-[''] before:h-[90%] before:w-px before:bg-gradient-to-b before:from-transparent before:via-sky-500 before:to-transparent before:block before:absolute before:top-[10%] before:left-0"),
 
@@ -233,7 +234,7 @@ func HomePage(ctx *pages.PageContext) I {
 			),
 
 			Section(
-				H2(Class("font-bold mb-2"), Text("Projects")),
+				H2(Class("font-bold mb-2"), i18n.Text("projects.title")),
 
 				Div(
 					Class("grid grid-cols-1 md:grid-cols-2 gap-2"),
@@ -298,7 +299,7 @@ func HomePage(ctx *pages.PageContext) I {
 					Class("!rounded-full"),
 					ButtonSizeLg,
 
-					Text("Buy me a Coffee"),
+					i18n.Text("misc.cta"),
 				),
 			),
 		),
@@ -309,10 +310,10 @@ func HomePage(ctx *pages.PageContext) I {
 			Div(
 				Class("app-container flex items-center justify-center text-sm h-full text-muted-foreground"),
 
-				Text("Built by "),
-				Knot(Class("hover:text-white hover:underline mx-1"), Href("https://github.com/canpacis"), Text("me")),
-				Text(" using "),
-				Knot(Class("hover:text-white hover:underline mx-1"), Href("https://github.com/canpacis/pacis"), Text("pacis")),
+				i18n.Text("misc.footer.0"),
+				Knot(Class("hover:text-white hover:underline mx-1"), Href("https://github.com/canpacis"), i18n.Text("misc.footer.1")),
+				i18n.Text("misc.footer.2"),
+				Knot(Class("hover:text-white hover:underline mx-1"), Href("https://github.com/canpacis/pacis"), i18n.Text("misc.footer.3")),
 			),
 		),
 	)
