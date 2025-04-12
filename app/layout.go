@@ -3,18 +3,24 @@ package app
 import (
 	"github.com/canpacis/pacis/pages"
 	font "github.com/canpacis/pacis/pages/font"
+	"github.com/canpacis/pacis/pages/i18n"
 	. "github.com/canpacis/pacis/ui/html"
+	"golang.org/x/text/language"
 )
 
 var inter = font.New("Inter", font.WeightList{font.W100, font.W900}, font.Swap, font.Latin, font.LatinExt)
 
 func Layout(ctx *pages.LayoutContext) I {
-	title := "canpacis | Muhammed Ali CAN"
-	desc := "I code stuff I dream up because I taught myself how. Always hungry to learn whatever it takes to build the next cool thing."
+	locale, err := i18n.Locale(ctx)
+	if err != nil {
+		locale = &language.English
+	}
+	title := i18n.Text("title").String(ctx)
+	desc := i18n.Text("subtitle").String(ctx)
 	keywords := "canpacis, pacis, ui/ux, frontend developer, library author, Muhammed Ali CAN, Go, JavaScript, TypeScript, Next JS, React, ui library"
 
 	return Html(
-		Lang("en"),
+		Lang(locale.String()),
 		Class("dark"),
 
 		Head(

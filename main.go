@@ -2,15 +2,22 @@ package main
 
 import (
 	"embed"
+	"log"
 	"net/http"
 	"os"
 
 	"github.com/canpacis/pacis/pages"
+	"github.com/canpacis/pacis/pages/i18n"
+	"github.com/canpacis/pacis/pages/middleware"
 	"github.com/canpacis/personal-website/app"
+	"golang.org/x/text/language"
 )
 
 //go:embed public
 var public embed.FS
+
+//go:embed messages
+var messages embed.FS
 
 //go:embed robots.txt
 var robots []byte
@@ -34,8 +41,14 @@ func fileServer(data []byte, contenttyp string) http.Handler {
 }
 
 func main() {
+	bundle, err := i18n.Setup(messages, language.English)
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	router := pages.Routes(
 		pages.Public(public, "public"),
+		pages.Middleware(middleware.Locale(bundle, language.English)),
 		pages.Layout(app.Layout),
 		pages.Route(pages.Path("/"), pages.Page(app.HomePage)),
 	)

@@ -1,0 +1,26 @@
+{
+  "title": "canpacis | Muhammed Ali CAN",
+  "heading": "Hi, I'm Muhammed Ali",
+  "subtitle": "I code stuff I dream up because I taught myself how. Always hungry to learn whatever it takes to build the next cool thing.",
+  "about": {
+    "title": "About",
+    "text": "Based in Turkey, I'm a self-taught developer with 5 years of frontend and fullstack experience who turned my English Literature degree into a unexpected coding journey. I build digital experiences that blend storytelling with technology, figuring out each programming challenge my own way—no bootcamps needed, just raw curiosity and determination to create stuff that actually matters."
+  },
+  "reach_out": "Reach out",
+  "skills": {
+    "title": "Skills"
+  },
+  "experience": {
+    "title": "Experience"
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "misc": {
+    "app": "App",
+    "library": "Library",
+    "contribution": "Contribution",
+    "cta": "Buy me a Coffee",
+    "footer": ["Built by", "me", "using", "pacis"]
+  }
+}
